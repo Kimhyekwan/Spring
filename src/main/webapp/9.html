@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+<style>
+	body{
+		height:100vh; 
+		background-color:gold;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	
+	}
+.prof{
+	width:300px;
+	text-align:center;
+	border-radius:10px;
+	padding:25px;
+}
+	.prof h3{
+		text-transform:capitalize;
+	}
+	.prof-photo img{
+		border-radius:50%;
+		width:200px;
+		
+	}
+	
+	.prof-photo {
+		
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	}
+	
+	.photo-upload{
+		margin-top:20px;
+	}
+	
+	.photo-upload label{
+		background-color:black;
+		color:white;
+		display:block;
+		padding:10px;
+		cursour:pointer;
+	}
+</style>
+
+
+</head>
+<body>
+<div class="prof">
+    <h3>upload</h3>
+    <div class="prof-photo">
+    	<img src="img/강아지.jpg">
+    	<img src="img/강아지.jpg">
+          </div>
+    <div class="photo-upload">
+      <label for="upload">Upload</label>
+    	<input type="file" id="up">
+    </div>
+  </div>
+
+<script type="text/javascript">
+	$('#up').change(function(e){ //enter이벤트처리 / 값 변경 확인하는 메서드
+		var p=URL.createObjectURL(e.target.files[0]);
+		$('.prof-photo img').attr('src',p);
+		
+	
+	});
+	
+</script>
+</body>
+</html>

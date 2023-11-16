@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+
+<script type="text/javascript">
+
+	function on(){
+		$("#aa").addClass("ac");
+	}
+	
+
+	function on1(){
+		$("#aa").removeClass("ac");
+	}
+	
+	function on2(){
+		$("#aa").toggleClass("ac");
+	}
+	
+	
+</script>
+	
+	
+	<style>
+	.ac{
+	background-color:aqua;
+	color:black;
+}
+</style>
+</head>
+<body>
+    <h1 id="aa">h1태그</h1>
+
+    <button onclick='on()'>css추가</button>
+
+    <button onclick='on1()'>css제거</button>
+
+    <button onclick='on2()'>css전환</button>
+</body>
+</html>

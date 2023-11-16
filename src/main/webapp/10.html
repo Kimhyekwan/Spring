@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="user">
+    <h2>show/hide</h2>
+    <div class="check-field">
+      <label>
+        <input type="checkbox" class="user-check">Yes
+      </label>
+      <div class="content-input">
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="check-field">
+        <label>
+        <input type="checkbox" class="user-check">Yes
+      </label>
+      <div class="content-input">
+        <input type="text" class="form-control">
+      </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript">
+  	$(".user-check").click(function(){ //체크박스 선택유무
+  		var c=$(this).is('.checked'); //is() : 태그의 유무 / id,class존재유무
+  		 if(c==true){
+  			 $(this).parents('.check-field').find('.content-input').show();
+  			 //체크박스의 부모를
+  		 }
+  		 else{
+  			 $(this).parents('.check-field').find('.content-input').hide();
+  		 }
+  	});
+  	
+  </script>
+</body>
+</html>
