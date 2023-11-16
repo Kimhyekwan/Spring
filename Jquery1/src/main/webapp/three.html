@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+	
+	.size button{
+		width:40px;
+		height:40px;
+		cursor:pointer;
+	}
+	.size button.active{
+		background-color:red;
+		color:white;
+	}
+</style>
+
+
+<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+<div class="fr">
+	<h1>사이즈선택</h1>
+	<div class="size">
+	<button>xs</button>
+	<button>s</button>
+	<button>m</button>
+	<button>l</button>
+	<button>xl</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$('.size button').click(function(){
+		$(this).addClass('active');
+		$(this).siblings().removeClass('active');
+	})
+
+</script>
+
+</body>
+</html>

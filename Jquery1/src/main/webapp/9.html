@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+</head>
+<body>
+
+
+<form class="agree">
+    <label>
+      <input type="checkbox" name="ch-all" class="ch-all">약관에 전체 동의
+    </label>
+    <label>
+      <input type="checkbox" name="ch1" class="ch">[필수] 서비스 이용약관
+    </label>
+    <label>
+      <input type="checkbox" name="ch2" class="ch">개인정보 수입 및 이용 동의
+    </label>
+    <label>
+      <input type="checkbox" name="ch3" class="chk">개인정보 취급 동의
+    </label>
+  </form>
+
+<script type="text/javascript">
+	$('.ch-all').click(function(){
+		//선택한 요소의 속성을 변경시키고 싶을떄
+		$('.ch').prop('checked',this.checked);
+		
+	})
+</script>
+
+</body>
+</html>

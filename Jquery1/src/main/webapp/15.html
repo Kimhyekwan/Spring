@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+<style>
+   @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+ body { 
+      margin: 0;
+      height: 100vh;
+      background-color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+    }
+    body.dark-mode {
+      background-color: #000; 
+      color: #fff;
+    }
+    .container {
+      width: 800px; 
+      text-align: center;
+    }
+    .btn-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+   
+
+</style>
+</head>
+<body>
+
+
+<div class="con">
+    <h1>Light & Dark Mode</h1>
+    <p class="p">
+    
+    국내 최대 규모의 블록체인 행사인 ‘업비트 디 컨퍼런스(UDC) 2023′이 13일 온·오프라인 동시 공개 방식으로 
+    서울 광진구 그랜드 워커힐 서울에서 개최됐다. 
+    올해로 6회를 맞는 이번 행사는 ‘블록체인의 모든 것’이라는
+     큰 주제 아래 39명의 국내외 블록체인 전문가들이 강연자로 참여한다.
+    
+
+    </p>
+    <button class="btn-toggle dark-btn" id="btn-toggle">
+      <span>Dark Mode</span> <i class="bi bi-moon-fill"></i>
+    </button>
+  </div>
+	<script type="text/javascript">
+	$('.btn-toggle').click(function(){
+		$('body').toggleClass('dark-mode');	
+		$(this).css({'border':'1px solid #ccc'});
+		
+		//버튼 안에 있는 텍스트 변경
+		$(this).children('span').text(
+			$(this).children('span').text() == 'Light Mode' ? 'Dark Mode' : 'Light Mode'		
+		
+		);
+		
+		//부트스트랩 아이콘
+		$(this).find('i').toggleClass('bi-moon-fill bi-sun-fill');
+		
+		
+	});
+	
+	</script>
+</body>
+</html>

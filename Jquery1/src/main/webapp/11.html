@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+	<style>
+	
+	.a{
+		margin-bottom:10px;
+	
+	}
+	.b{
+		width:100px;
+		height:100px;
+		background-color:green;
+	}
+	</style>
+
+
+</head>
+<body>
+
+<button class="a">Click</button>
+<div class="b"></div>
+
+<script type="text/javascript">
+	$('.a').click(function(){
+		$('.b').animate({
+			width:'100%',
+			borderRadius:'10px'
+			
+		})
+	})
+
+</script>
+</body>
+</html>

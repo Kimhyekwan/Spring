@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/one.css">
+<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+
+</head>
+<body>
+<div class="a">
+	<div class="item">
+		<a class="it" href="#none"><img src="img/강아지.jpg"></a>
+		<a class="it" href="#none"><img src="img/다람쥐.jpg"></a>
+
+		
+	</div>
+
+</div>
+<script type="text/javascript">
+	setInterval(function(){
+		$('.item').animate({left:'-1200px'},function(){
+			$('item').css({left:0});
+			$('.if:first-child').appendTo('.item');
+		});
+	},3500);
+	
+
+</script>
+
+
+</body>
+</html>

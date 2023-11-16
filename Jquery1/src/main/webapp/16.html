@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+
+
+<style>
+   @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+    
+   
+</style>
+</head>
+<body>
+<h1>고객 문의 사항</h1>
+<textarea id="test" name="test" cols="30" rows="10" > </textarea>
+<div id="over" style="color:red;">입력 글자수가 초과되었습니다</div>
+<div id="test_cnt">0 / 100</div>
+
+<div class="con">
+	<button class="a" id="a" >가</button>
+	<button class="b" id="b" >가</button>
+	<button class="c" id="c" >가</button>
+	
+    <h1>웹 개발자의 분류</h1>
+    <p class="p">
+    프론트엔드, 백엔드 개발자: 프론트엔드 개발자는 백엔드 API에서 가져온 데이터의 출력, 입력을 통한 비지니스 로직 구성과 사용자와 대화하는 사용자 인터페이스 부분을 작업하는 개발자를 말한다. 분별하기 헷갈리는 직종으로 웹퍼블리셔가 있는데, 웹퍼블리셔는 html 중심이거나, 서버사이드가 감싸는 구조 형태의 웹을 지향하는 웹퍼블리셔와 개발자의 업무 스타일의 직군으로서 웹표준 반응형웹과 UI를 만드는 디자인 쪽에 가깝고, 클라이언드 사이드 영역이기도 하지만, 프론트 엔드 개발자는 프론트엔드, 백엔드의 완전한 분리 구조를 지향하는 업무스타일의 직군으로서 웹퍼블리셔와 같이 인터페이스의 디자인 관점도 있지만, 웹퍼블리셔와 달리 컴포넌트 아키텍쳐를 지향하며, 이벤트나 서버와 API 통신해서 로직을 어떻게 푸는 관점을 중시한다. 백엔드 개발자도 기존 개발자와 스펙이 조금 다르고, 백엔드의 뷰는 화면개발이 아닌 API 개발이고, 백엔드 인증 처리도 따로 알아야 하며, 데이터베이스 분석과 API서버를 개발한다. 프론트엔드에서 전달된 데이터의 포맷이나 데이터베이스 입출력 및 다양한 비즈니스 프로세스를 프로그래밍 코드로 구현하는 역할을 한다. 데이터베이스, 웹서버, 네트워킹 등 웹 서버의 인프라에 대한 이해가 필요하다. 웹퍼블리셔와 개발자로 나뉜 방식은 모든 호출을 서버에서 가져와야 했고, 컴포넌트화가 안되었지만, 프론트엔드와 백엔드로 나뉜 개발방식은 서버의 컴퓨터와 사용자 컴퓨터가 http통신으로 데이터만 교환하고 완전히 분리구조를 지향한다.
+    
+    
+    
+    
+   	</p>
+   	
+   	<h1>웹 개발자들이 주로 작업하는 환경</h1>
+   	<ul>
+   	<li>운영 체제: 윈도, 유닉스, 리눅스</li>
+<li>클라이언트 측면 언어: HTML, CSS, Javascript, XML ,XHTML</li>
+<li>클라이언트 측면 js 프레임워크: jQuery, dojo , prototype, YUI, Jindo</li>
+<li>클라이언트 측면 ui 프레임워크: jQuery UI, fontawesome, bootstrap</li>
+   	
+   	</ul>
+   	
+   	</div>
+   	<script type="text/javascript">
+   	$('.a').click(function(){
+		$('.con').css({'font-size':'20px'
+		});
+
+   	});
+   	
+ 	$('.b').click(function(){
+		$('.con').css({'font-size':'25px'
+		});
+
+   	});
+ 	
+	$('.c').click(function(){
+		$('.con').css({'font-size':'30px'
+		});
+
+   	});
+	$(document).ready(function() {
+		var max= 100;
+		var cur=0;
+		
+		$('#over').hide();
+		
+	    $('#test').on('keyup', function() {
+	        $('#test_cnt').html("("+$(this).val().length+" / 100)");
+	        
+	        if($(this).val().length > 100) {
+	            $('#over').show();	
+	           
+	         }else{
+	        	 $('#over').hide();
+	         }
+	    });
+	});
+   	</script>
+</body>
+</html>

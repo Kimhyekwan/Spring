@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+</head>
+<body>
+<div id="gal">
+	
+<div class="p">
+	<span class="p-num">
+	<span></span>/<span></span>
+	</span>
+		<button class="prev">&lt;</button>
+		<button class="next">&gt;</button>
+	</div>
+	
+	<div class="con">
+		<div><img src="img/강아지.jpg" ></div>
+		<div><img src="img/다람쥐.jpg" ></div>
+	
+	</div>
+</div>	
+	<script type="text/javascript">//3
+	//이미지개수
+	var total=$('.con div').length;
+	var current=1;
+	
+	$('.p-num span:first').text(current); //1 
+	$('.p-num span:last').text(total); //2
+
+	
+	//다음버튼누를떄
+	$('.next').click(function(){
+		current++;
+		if(current > total){
+			current=1;
+		}
+		$('.con > div:first').insertAfter('.con > div:last');
+		//insertAfter: 지정한 요소 뒤에 새로운 요소 삽입 -> last뒤에 first추가
+		$('.p-num span:first').text(current);
+		
+	})
+	
+	$('.prev').click(function(){
+	current--;
+	if(current < 1){
+		current=total;
+	}
+	$('.con > div:last').insertBefore('.con > div:first');
+	//insertAfter: 지정한 요소 뒤에 새로운 요소 삽입 -> last뒤에 first추가
+	//insertBefor: 지정한 요소 시작에 요소 삽입-> first앞에 last추가
+	$('.p-num span:first').text(current);
+	
+	})
+	
+	
+	
+</script>
+	
+</body>
+</html>

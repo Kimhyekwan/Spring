@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<style>
+	.fr{
+		width:300px;
+		border-radius:10px;
+		box-shadow: 0 0 15px gray;
+	
+	}
+	#user{
+		border:1px solid #ccc;
+		padding:5px;
+		width:250px;
+	
+	
+	}
+	#print{
+		display:block;
+		color:blue;
+	}
+	
+</style>
+
+</head>
+<body>
+
+  <div class="fr">
+    <h2>요청사항</h2>
+    <input id="user" type="text">
+    <p>
+      <b>입력하신 내용</b> <span id="print"></span>
+    </p>
+  </div>
+  
+  
+  <script type="text/javascript">
+  $('#user').keydown(function(){
+	  var p=$('#user').val();
+	  $('#print').text(p);
+  })
+  
+  </script>
+
+</body>
+</html>

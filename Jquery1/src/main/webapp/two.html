@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+
+  <div class="items">
+    <b>제이쿼리</b>
+    <a href="#" class="list-item">List 1</a>
+    <a href="#" class="list-item">List 2</a>
+    <a href="#" class="list-item start">List 3</a>
+    <a href="#" class="list-item">List 4</a>
+    <a href="#" class="list-item">List 5</a>
+  </div> 
+  
+ <script type="text/javascript">
+ 	 $('.list-item').css({
+ 		'display':'block',
+ 		'text-decoration':'none'
+ 	 });
+  	
+ 	 $('.list-item').siblings('a').css({
+ 		'color':'blue'
+
+ 	 });
+ 	 
+ 	 $('.list-item.start').siblings().css('background-color','pink')
+ 	 $('.list-item.start').parent().css({
+ 		 'border':'2px  solid green'
+ 	 });
+ </script>
+
+</body>
+</html>
